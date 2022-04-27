@@ -1,0 +1,66 @@
+/* Body Segment */
+body{
+
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+}
+
+/* Button Segment */
+.button{
+  display: inline-block;
+  outline: none;
+  background-color: transparent;
+  width: 220px;
+  height: 60px;
+  border: 3px solid #333;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.button.active{
+  left: 50% + 110px;
+  font-size: 0px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-left-color: transparent;
+  animation: rotate .8s ease 0.5s infinite;
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(360deg);
+  }
+}
+
+.button.success{
+  position: relative;
+  border-color: #333;
+  animation: bounce .3s ease-in;
+}
+
+@keyframes bounce{
+  0%{
+    transform: scale(0.9);
+  }
+}
+
+.button.success::before{
+  content: '';
+  position: absolute;
+  background: url('check-solid.svg') no-repeat;
+  left: 0px;
+  right: 0px;
+  top: 8px;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+}

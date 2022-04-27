@@ -1,0 +1,145 @@
+:root {
+  --font: "Inter", sans-serif;
+}
+
+*{
+	user-select: none;
+}	
+
+body{
+	background-color: wheat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+  size: 100% 100%;
+	overflow: hidden;
+}
+
+h1.Title{
+  color: white;
+	font-size: 400%;
+	text-align: center;
+	padding: 25% 0;
+	letter-spacing: 0.1rem;
+}
+
+h2{
+	color: white;
+	font-size: 200%;
+	position:sticky;
+	padding: 200px;	
+}
+
+h3.Nav{
+	color: white;
+	font-size: 150%;
+	position:relative;
+  padding: auto ;
+  left: auto; 
+  margin-bottom: -10px;
+
+}
+
+h4.Nav{
+	color: white;
+	font-size: 150%;
+	position:relative;
+  padding-top: 30px ;
+  left: auto; 
+  margin-bottom: -10px;
+}
+h5{
+  color: rgb(187, 54, 187);
+  font-size:xx-large;
+  padding: top 1px;;
+  padding-left: 50%;
+  letter-spacing: normal;
+  right: 720px;
+}
+
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: white;
+    background: transparent;
+    text-decoration: none;
+  }
+  a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+
+.burger-wrapper {
+  cursor: pointer;
+}
+#meny {
+    background: #333;
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    transform: translateX(50rem);
+    top: 0;
+    z-index: 0;
+    transition: 0.5s;
+}
+#menyAvPaa {
+    display: none;
+}
+
+#menyAvPaa:checked ~ #meny {
+    transform: translateX(0rem);
+}
+
+#burger {
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#burger > div {
+    height: 2px;
+    background-color: black;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+#menyAvPaa:checked ~ #burger > div {
+  background-color: black;
+}
+
+#menyAvPaa:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+nav li{
+    content:none;    
+}
+nav#meny{
+    content: none;
+}
+
