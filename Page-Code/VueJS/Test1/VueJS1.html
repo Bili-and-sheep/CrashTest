@@ -16,30 +16,44 @@
             <div class="row">
                 <p class="jumbotron"> Login : <input type="text" v-model="user"/> connecter en tant que {{user}}</p>
         </div>
+        
+        <h1 class="display-4" v-if="commandes.length > 0">Commande disponible</h1>
+        <ul>
+            <li v-for="commandes in commandes">{{commandes}}</li>
+        </ul>
+
         <h1 class="display-4">Produit disponible</h1>
         <div class="row">
-            <div class="col-3" v-for="produit in produit">
+            <div class="col-3" v-for="produits in produits">
                 <p class="jumbotron">
-                    {{produit}} <br>
-                    <button v-on:click="commander()">Commander</button>
+                    {{produits}} <br>
+                    <button v-on:click="commander(produits)">Commander</button>
                 </p>
         </div>
     </div>
+
     <script>
         var app = new Vue({
             el: "#app",
             data : {
                 user : "Eliott", 
-                produit : ["pizza", "hamburger", "cheesecake", "tacos"],
+                produits : ["pizza", "hamburger", "cheesecake", "tacos"],
                 commandes : []
             },
 
             methods:{
                 commander: function(){
                     console.log("ca marhce");
-                }   
+                },   
+                commander: function(produits){
+                    console.log(produits);
+                },      
+                commander: function(produits){
+                    this.commandes.push(produits);
+                },   
             }     
         })
     </script>
+
 </body>
 </html>
