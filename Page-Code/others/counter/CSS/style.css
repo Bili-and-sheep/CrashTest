@@ -46,6 +46,7 @@ button{
   box-shadow: 0 0 10px rgb(51, 51, 51, 0.158);
   border: none;
   border-radius: 50px;
+  transition: all .4s;
 }
 
 .incr{
