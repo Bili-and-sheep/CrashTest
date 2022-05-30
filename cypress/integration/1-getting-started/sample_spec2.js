@@ -9,9 +9,8 @@ describe('My First Test', function () {
 
             cy.url()
                 .should('include', '/others/counter/')
+            cy.get('.incr').click()
+            cy.get('.decr').click()
 
-            cy.contains('-').dblclick()
-            .pause()
-            cy.contains('+').click()
         })
 })
