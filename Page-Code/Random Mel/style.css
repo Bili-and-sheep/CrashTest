@@ -1,0 +1,31 @@
+:root {
+    --font: "Inter", sans-serif;
+}
+
+* {
+    user-select: none;
+}
+
+body {
+    background-color: whitesmoke;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    size: 100% 100%;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: xx-large;
+    text-align: justify;
+}
+
+img {
+    max-width: 10%;
+    max-height: 10%;
+}

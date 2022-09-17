@@ -1,5 +1,5 @@
 /* Body Segment */
-body{
+body {
 
   display: flex;
   height: 100vh;
@@ -9,7 +9,7 @@ body{
 }
 
 /* Button Segment */
-.button{
+.button {
   display: inline-block;
   outline: none;
   background-color: transparent;
@@ -25,7 +25,7 @@ body{
   transition: all ease 0.5s;
 }
 
-.button.active{
+.button.active {
   left: 50% + 110px;
   font-size: 0px;
   width: 50px;
@@ -35,25 +35,25 @@ body{
   animation: rotate .8s ease 0.5s infinite;
 }
 
-@keyframes rotate{
-  0%{
+@keyframes rotate {
+  0% {
     transform: rotate(360deg);
   }
 }
 
-.button.success{
+.button.success {
   position: relative;
   border-color: #333;
   animation: bounce .3s ease-in;
 }
 
-@keyframes bounce{
-  0%{
+@keyframes bounce {
+  0% {
     transform: scale(0.9);
   }
 }
 
-.button.success::before{
+.button.success::before {
   content: '';
   position: absolute;
   background: url('check-solid.svg') no-repeat;
